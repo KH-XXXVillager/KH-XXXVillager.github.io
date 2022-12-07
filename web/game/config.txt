@@ -1,0 +1,3 @@
+Game_name:祥阁鸣泣之时Ⅰ;
+Title_bgm:whenxianggecry1op.mp3;
+Title_img:background1.png;
