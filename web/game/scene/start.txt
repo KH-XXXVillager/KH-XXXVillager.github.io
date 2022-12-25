@@ -1,13 +1,20 @@
-setVar:san=100;
-setVar:day=0;
+setVar:san=100;//san值定义为100
+setVar:day=0;//日期，
+setVar:testscoreguess=80;//考试得分估计，影响心态
 我:害，又是这样;//半夜1点
 我:直接睡觉;//关上手机
 intro:明天有什么课来着......|得，不管了哪个老师来就上啥;//开始记不清的恶心血腥的梦
-？？？:啊呜啊啊啊！;//十分甚至九分的疼痛
+？？？:啊呜啊啊啊啊啊啊啊！;//十分甚至九分的疼痛
 intro:甚么b动静，|老子在睡觉呢;
 我:你他妈......我擦;//睁眼，因画面冲击昏厥力（呕）
+setTextbox:hide;//此处插入一个敲脑壳の动画
+
+setTextbox:on -next;
 我:呕乌啊啊啊！;
 setVar:san=san-5;//掉san必然事件,san=95
+
+unlockBgm:whenxianggecry1op.mp3 -name=祥阁鸣泣之时 OP1; // 解锁bgm并赋予名称
+
 
 intro:第二天;
 setVar:day=day+1;
@@ -50,6 +57,30 @@ intro:客厅;
 我:唉;
 setVar:san=san-1
 
+callScene:day1-gotoschool.txt;//第1天开始
+callScene:day1-schoolmorning.txt;
+callScene:day1-noon.txt;
+callScene:day1-afternoon.txt;
+callScene:day1-gohome.txt;
+callScene:day1-night.txt;
 
-changeScene:3-gotoschool.txt -when=day>2;
-changeScene:normal-gotoschool.txt;
+callScene:day2-gotoschool.txt;//第2天开始
+callScene:day2-schoolmorning.txt;
+callScene:day2-noon.txt;
+callScene:day2-afternoon.txt;
+callScene:day2-gohome.txt;
+callScene:day2-night.txt;
+
+callScene:day3-gotoschool.txt;//第3天开始，少量幻觉必然事件，如果san值救回来满值就没事，如果掉san太多就寄
+callScene:day3-schoolmorning.txt;
+callScene:day3-noon.txt;//从这里可能出现问题
+callScene:day3-afternoon.txt;
+callScene:day3-gohome.txt;
+callScene:day3-night.txt;
+
+
+
+
+
+
+end;//本场悲剧的结束。
