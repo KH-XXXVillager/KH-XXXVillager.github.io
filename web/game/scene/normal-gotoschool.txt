@@ -1,2 +1,0 @@
-changeScene:2.txt -when=a>1; // a>1时跳转到场景2
-changeScene:3.txt; // 如果a<=1，那么上面的语句不执行，自然就执行这一句了。
